@@ -2,12 +2,60 @@
 <html>
 <head>
   <title>Deepcut</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #001f3f, #000a14);
+      color: white;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 20px;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: #4dd0e1;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    iframe {
+      background-color: white;
+      margin-top: 15px;
+      border-radius: 8px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .fish {
+      position: fixed;
+      font-size: 30px;
+      z-index: 1;
+      pointer-events: none;
+      animation: swim linear infinite;
+    }
+
+    .fish1 { top: 15%; animation-duration: 14s; }
+    .fish2 { top: 45%; animation-duration: 18s; animation-delay: 2s; font-size: 40px; }
+    .fish3 { top: 75%; animation-duration: 12s; animation-delay: 5s; }
+    .fish4 { top: 88%; animation-duration: 20s; animation-delay: 1s; font-size: 25px; }
+
+    @keyframes swim {
+      0% { left: 105%; }
+      100% { left: -10%; }
+    }
+  </style>
 </head>
 <body>
+  <div class="fish fish1">🐟</div>
+  <div class="fish fish2">🐠</div>
+  <div class="fish fish3">🐡</div>
+  <div class="fish fish4">🐟</div>
+
   <p>
-    <a href="https://krillion.io/" target="embedFrame">Click here for the deepcut</a>
+    <a href="https://krillion.io/" target="embedFrame">Open Website</a>
   </p>
 
-  <iframe name="embedFrame" width="100%" height="600px" style="border: 1px solid #ccc;"></iframe>
+  <iframe name="embedFrame" width="100%" height="600px" style="border: none;"></iframe>
 </body>
 </html>
